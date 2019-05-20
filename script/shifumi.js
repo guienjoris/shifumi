@@ -13,20 +13,20 @@ var comment= document.getElementById("comment");
 function choixUtilisateur(){
     choix_random= Math.random();
     pierre.onclick=function(){
-        img_selection_nous.setAttribute("src","./image/pierre.png");
+        img_selection_nous.setAttribute("src","./image/pierre.jpg");
         img_resultat.style.display="flex";
         choix_utilisateur=pierre;
         return choixUtilisateur();
     }
     ciseau.onclick=function(){
-        img_selection_nous.setAttribute("src","./image/ciseau.png");
+        img_selection_nous.setAttribute("src","./image/ciseaux.jpg");
         img_resultat.style.display="flex";
         choix_utilisateur=ciseau;
         return choixUtilisateur();
 
     }
     feuille.onclick=function(){
-        img_selection_nous.setAttribute("src","./image/feuille.png");
+        img_selection_nous.setAttribute("src","./image/feuille.jpg");
         img_resultat.style.display="flex";
         choix_utilisateur=feuille;
         return choixUtilisateur();
@@ -35,52 +35,44 @@ function choixUtilisateur(){
     
     if (choix_random <= 0.33){
         var choix_adversaire= pierre;
-        img_selection_adversaire.setAttribute("src","./image/pierre.png");
+        img_selection_adversaire.setAttribute("src","./image/pierre.jpg");
     }
     else if ( choix_random >=0.33 && choix_random<= 0.66){
         var choix_adversaire=ciseau;
-        img_selection_adversaire.setAttribute("src","./image/ciseau.png");
+        img_selection_adversaire.setAttribute("src","./image/ciseaux.jpg");
     }
     else {
         var choix_adversaire=feuille;
-        img_selection_adversaire.setAttribute("src","./image/feuille.png");
+        img_selection_adversaire.setAttribute("src","./image/feuille.jpg");
     }
 
     if (choix_adversaire == pierre && choix_utilisateur == pierre ){
-        
         comment.innerHTML="Match nul";
     }
     else if (choix_adversaire == pierre && choix_utilisateur == feuille ){
         compteurNous.innerHTML++;
-        compteurAdversaire.innerHTML--;
         comment.innerHTML="Vous avez gagné";
     }
     else if (choix_adversaire == pierre && choix_utilisateur == ciseau ){
-        compteurNous.innerHTML--;
         compteurAdversaire.innerHTML++;
         comment.innerHTML="Vous avez perdu";
     }
     else if (choix_adversaire == ciseau && choix_utilisateur == ciseau ){
-        
         comment.innerHTML="Match nul";
     }
     else if (choix_adversaire == ciseau && choix_utilisateur == feuille ){
-        compteurNous.innerHTML--;
         compteurAdversaire.innerHTML++;
         comment.innerHTML="Vous avez perdu";
     }
     else if (choix_adversaire == ciseau && choix_utilisateur == pierre){
         compteurNous.innerHTML++;
-        compteurAdversaire.innerHTML--;
         comment.innerHTML="Vous avez gagné";
     }
     else if (choix_adversaire == feuille && choix_utilisateur == ciseau){
         compteurNous.innerHTML++;
-        compteurAdversaire.innerHTML--;
         comment.innerHTML="Vous avez gagné";
     }
     else if (choix_adversaire == feuille && choix_utilisateur == pierre){
-        compteurNous.innerHTML--;
         compteurAdversaire.innerHTML++;
         comment.innerHTML="Vous avez perdu";
     }
