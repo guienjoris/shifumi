@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shifumi</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    
+</head>
+<body>
+    <h1>Shifumi</h1>
+    <div id="container_shifumi">
+    <img src="./image/pierre.png" id="pierre" alt="pierre" onclick="choixUtilisateur(), random()">
+    <img src="./image/feuille.png" id="feuille" alt="feuille" onclick="choixUtilisateur()">
+    <img src="./image/ciseau.png" id="ciseau" alt="ciseau" onclick="choixUtilisateur()">
+    </div>
+    <div id="score">
+        <h2 class=score_vous >Vous: <span id="compteur_nous"></span></h2>
+        <h2 class="score_adversaire">Adversaire: <span id="compteur_adversaire"></span></h2>
+        </div>
+    <div id="img_resultat">
+    <img src="" alt="img_resultat" id="img_resultat_nous">
+    <img src="" alt="img_resultat" id="img_resultat_adversaire">
+    </div>
+    
+   
+    
+    <p id="comment"></p>
+  
+    <script src="./script/shifumi.js"></script>
+</body>
+</html>
