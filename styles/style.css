@@ -27,6 +27,7 @@ h1, h2 {
 
 #container_shifumi img {
   width: 15%;
+  height: 25vh;
 }
 
 #comment {
@@ -45,15 +46,18 @@ h1, h2 {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 3vw;
+  height: 25vh;
 }
 
 #img_resultat_nous {
   width: 15%;
   margin-right: 30vw;
+  height: 25vh;
 }
 
 #img_resultat_adversaire {
   width: 15%;
+  height: 25vh;
 }
 
 #score {
